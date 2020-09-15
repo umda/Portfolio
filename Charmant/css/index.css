@@ -1,0 +1,710 @@
+@charset "UTF-8";
+@media (min-width:1920px) {
+    @font-face {
+        font-family: 'AAA';
+        src: local('Ubuntu-Bold'), url('../css/Ubuntu/Ubuntu-Bold.ttf');
+    }
+    @font-face {
+        font-family: 'BBB';
+        src: local('Ubuntu-Light'), url('../css/Ubuntu/Ubuntu-Light.ttf');
+    }
+    @font-face {
+        font-family: 'CCC';
+        src: local('Ubuntu-Medium'), url('../css/Ubuntu/Ubuntu-Medium.ttf');
+    }
+    @font-face {
+        font-family: 'DDD';
+        src: local('NanumGothic-ExtraBold'), url('../css/Nanum_Gothic/NanumGothic-ExtraBold.ttf');
+    }
+    @font-face {
+        font-family: 'EEE';
+        src: local('NanumGothic-Bold'), url('../css/Nanum_Gothic/NanumGothic-Bold.ttf');
+    }
+    @font-face {
+        font-family: 'FFF';
+        src: local('NanumGothic-Regular'), url('../css/Nanum_Gothic/NanumGothic-Regular.ttf');
+    }
+    #header_fix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        opacity: 0.5;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        overflow: hidden;
+        z-index: 111;
+        display: none;
+    }
+    .logo {
+        flex: 1;
+        display: block;
+        height: 50%;
+        line-height: 135px;
+    }
+    .menu {
+        flex: 6;
+        line-height: 100px;
+        /* border: 1px solid blue; */
+    }
+    .menu>ul {
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    .menu>ul>li {
+        flex: 1;
+        text-align: center;
+        font-family: AAA;
+        color: black;
+    }
+    .menu>ul>li>a {
+        display: block;
+        /* padding: 0 40px; */
+        box-sizing: border-box;
+        font-size: 1.302vw;
+        width: 100%;
+        position: relative;
+    }
+    .menu>ul>li:hover>a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        left: 30%;
+        bottom: 15px;
+        background-color: #bdbdbd;
+    }
+    /* ----------------------------랜딩페이지---------------------------- */
+    #popup {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        right: 0;
+        border-radius: 20%;
+        background: url(../image/sch-background.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: none;
+        z-index: 111;
+    }
+    #popup button {
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+    }
+    #popup h2 {
+        position: absolute;
+        width: 100%;
+        top: 100px;
+    }
+    #sch {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        border: 1px solid gray;
+        border-radius: 5%;
+        background: white;
+        box-shadow: 5px 5px 13px grey;
+        display: none;
+        z-index: 111;
+    }
+    textarea {
+        width: 95%;
+        height: 80%;
+    }
+    aside {
+        width: 49%;
+        overflow: hidden;
+        position: fixed;
+        top: 54%;
+        left: -23%;
+        z-index: 1111;
+        transform: rotate(-90deg);
+    }
+    #aside {
+        width: 85%;
+        margin: auto;
+        height: 100%;
+        border-radius: 1.302vw;
+        text-align: center;
+        display: flex;
+        line-height: 2;
+        background-color: #bebebe;
+    }
+    #aside>a {
+        flex: 1;
+        text-decoration: none;
+        margin: 0 0.260vw;
+        color: white;
+        font-family: BBB;
+        font-size: 0.781vw;
+        /* border: 1px solid red; */
+        width: 26.042vw;
+    }
+    #aside>a:hover {
+        color: black;
+        font-weight: bold;
+    }
+    #aside>a:hover:after {
+        content: '';
+        display: block;
+        /* position: absolute; */
+        width: 50%;
+        margin: auto;
+        height: 2px;
+        left: 0;
+        bottom: 8px;
+        background-color: black;
+    }
+    #top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: #404040;
+        opacity: 0.5;
+        color: white;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 111;
+        display: none;
+    }
+    /* -----------------------img section start------------------------- */
+    #header {
+        width: 90%;
+        position: relative;
+        height: 100px;
+        display: flex;
+        margin: auto;
+        overflow: hidden;
+    }
+    .section {
+        position: relative;
+        box-sizing: border-box;
+    }
+    #img {
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid green; */
+        overflow: hidden;
+        position: relative;
+    }
+    #img>button {
+        position: absolute;
+        border: 0px solid black;
+        background-color: #404040;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #img>button:active {
+        outline: none;
+        border: none;
+    }
+    #prev {
+        bottom: 0;
+        left: 47%;
+        z-index: 11;
+    }
+    #next {
+        bottom: 0;
+        right: 47%;
+        z-index: 11;
+    }
+    #img>ul {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        /* border: 1px solid blue; */
+        overflow: hidden;
+        /* display: flex; */
+    }
+    #img>ul>li {
+        /* flex: 1; */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 100%;
+    }
+    #img img {
+        width: 80%;
+        height: 100%;
+    }
+    /* ----------------------------charmant---------------------------- */
+    #charmant {
+        width: 100%;
+        height: 100vh;
+        margin: 0px auto;
+        position: relative;
+        overflow: hidden;
+        background-color: black;
+        background: url(../image/HALL.png);
+        background-size: 100%;
+    }
+    #charmant h1 {
+        color: white;
+        font-size: 4.167vw;
+        top: 13%;
+        left: 16%;
+        width: 50%;
+        font-family: BBB;
+        z-index: 111;
+        text-align: left;
+    }
+    .CHbg>img {
+        width: 100%;
+    }
+    div.charmant_1 {
+        position: absolute;
+        top: 25%;
+        left: 16%;
+        width: 68%;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+    }
+    .charmant_1>div {
+        flex: 1;
+    }
+    .CHimg>img {
+        width: 100%;
+    }
+    .CHtext {
+        color: white;
+        font-size: 0.833vw;
+        font-family: FFF;
+    }
+    .CHtext>div>p {
+        display: block;
+        padding-bottom: 1.2vw;
+        padding-left: 0.6vw;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    .CHaddress {
+        position: absolute;
+        bottom: 6%;
+        width: 60%;
+        left: 20%;
+        display: flex;
+    }
+    .CHaddress>div.span1,
+    .CHaddress>div.span2 {
+        flex: 1;
+        text-align: justify;
+        /* border: 1px solid lightblue; */
+    }
+    .CHaddress ul {
+        position: relative;
+    }
+    .CHaddress ul:nth-of-type(1)::before {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: #edd6ba;
+        position: absolute;
+        width: 90%;
+        left: 0;
+        top: 9px;
+    }
+    .CHaddress ul:after {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: #edd6ba;
+        position: absolute;
+        width: 90%;
+        left: 0;
+        bottom: -15px;
+    }
+    .CHaddress ul>li:nth-of-type(1) {
+        color: #deab72;
+        font-family: EEE;
+        font-size: 1.042vw;
+        padding: 0.781vw;
+        position: relative;
+    }
+    .CHaddress ul>li:nth-of-type(2) {
+        color: white;
+        font-family: FFF;
+        font-size: 0.781vw;
+        padding: 0px 1.781vw;
+    }
+    /* ----------------------------artist---------------------------- */
+    #artist {
+        width: 75%;
+        position: relative;
+        /* border: 1px solid black; */
+        margin: auto;
+        padding: 53px 0;
+    }
+    #artist>h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 3.646vw;
+        font-family: AAA;
+        padding-top: 2.083vw;
+    }
+    #artist>h2 {
+        display: block;
+        text-indent: 6%;
+        font-size: 1.563vw;
+        font-family: sans-serif;
+        padding-bottom: 1.042vw;
+        text-align: left;
+    }
+    .flute {
+        width: 100%;
+        display: flex;
+        padding-bottom: 3%;
+        position: relative;
+    }
+    .flute1,
+    .flute2 {
+        display: flex;
+    }
+    .flute::after {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: #edd6ba;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 30px;
+    }
+    .flute>div {
+        text-align: center;
+    }
+    .flute img {
+        position: relative;
+        display: block;
+        width: 60%;
+        margin: auto;
+    }
+    .flute p {
+        font-size: 1.302vw;
+        font-family: DDD;
+        padding-top: 5%;
+    }
+    .artist_2 {
+        width: 100%;
+        display: flex;
+        left: 0;
+        top: 0;
+    }
+    .artist_1 {
+        flex: 1;
+        display: flex;
+    }
+    .composer_1 {
+        flex: 0.5;
+    }
+    .artist_1 img {
+        position: relative;
+        display: block;
+        width: 60%;
+        margin: auto;
+    }
+    .artist_1 p {
+        font-size: 1.302vw;
+        font-family: DDD;
+        padding-top: 5%;
+    }
+    .artist_2 h2 {
+        display: block;
+        text-indent: 27%;
+        font-size: 1.563vw;
+        font-family: sans-serif;
+        padding-bottom: 1.042vw;
+        text-align: left;
+    }
+    /* ----------------------------calendal---------------------------- */
+    #calendar {
+        background: #404040;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .calendar {
+        position: relative;
+        width: 100%;
+        top: 9%;
+        margin: auto;
+    }
+    .cal_text {
+        position: absolute;
+        width: 100px;
+        left: 48%;
+        top: 55%;
+        text-align: center;
+    }
+    .pignose-calendar {
+        margin: 19px auto !important;
+    }
+    .pignose-calendar .pignose-calendar-unit {
+        float: left;
+        display: block;
+        height: 12vh !important;
+        width: 14.28%;
+        text-align: center;
+        line-height: 2.8em;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /* ----------------------------audition---------------------------- */
+    #audition {
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .aud_img {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .aud_img_img {
+        width: 100%;
+    }
+    .aud_img_img>img {
+        position: relative;
+        width: 45%;
+        left: 16%;
+    }
+    .aud_img_text {
+        position: absolute;
+        width: 35%;
+        height: 85%;
+        left: 12%;
+        top: 7%;
+        border: 5px solid #ffe4ca;
+        border: 5px solid #404040;
+        z-index: 11;
+    }
+    .aud_img_text>h1 {
+        width: 50%;
+        position: relative;
+        font-size: 2.083vw;
+        top: 20%;
+        left: 5%;
+        text-align: left;
+    }
+    .aud_img_text>h1::after {
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        width: 50%;
+        background-color: black;
+    }
+    .aud_img_text>div {
+        width: 90%;
+        position: relative;
+        font-size: 0.729vw;
+        top: 28%;
+        line-height: 1.302vw;
+        color: grey;
+        text-align: left;
+        padding-left: 5%;
+    }
+    .aud_text {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        padding-top: 2%;
+    }
+    .aud_text>div {
+        height: 13vw;
+        margin: auto;
+        position: relative;
+        flex: 1;
+    }
+    .aud_text h2 {
+        position: absolute;
+        font-size: 1.042vw;
+        font-weight: bold;
+        width: 30%;
+        height: 11%;
+        left: 5%;
+        top: 3%;
+        border-bottom: 1px solid #404040;
+        color: #404040;
+        text-align: center;
+    }
+    .aud_text>div>div {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 18%;
+        font-size: 0.677vw;
+        color: gray;
+        text-align: left;
+    }
+    .aud_text>div:nth-child(2)>div {
+        line-height: 1.146vw;
+    }
+    .aud_text>div>div>p {
+        padding-bottom: 4%;
+    }
+    .aud_text>div>div>p>i {
+        font-size: 0.677vw;
+    }
+    /* ----------------------------receive---------------------------- */
+    #receive {
+        /* border: 1px solid green; */
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    #receive>div {
+        width: 100%;
+    }
+    #receive>div>button {
+        background-color: white;
+        color: #404040;
+        border-radius: 0.781vw;
+        width: 20%;
+        height: 3.385vw;
+        border: 3px solid #404040;
+        margin: 6%;
+        font-size: 1.406vw;
+        font-family: fff;
+        letter-spacing: 1.302vw;
+        text-indent: 10%;
+    }
+    #receive>div>button:hover {
+        background-color: #fceed8;
+        border: 0px solid black;
+        cursor: pointer;
+    }
+    #receive>form {
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        display: none;
+    }
+    #receive>form>div {
+        /* border: 1px solid green; */
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+    .check>input {
+        flex: 1;
+        height: 2.604vw;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.521vw;
+        margin: 2% 0.5%;
+        font-size: 0.8vw;
+    }
+    #receive>form>div>input:nth-of-type(2) {
+        margin-left: 10px;
+    }
+    .check1>button {
+        flex: 1;
+        height: 50px;
+        margin: 20px 5px;
+        background-color: white;
+        border: 1px solid #bdbdbd;
+        border-radius: 10px;
+    }
+    .check1>select {
+        height: 50px;
+        margin: 20px 5px;
+        border-radius: 10px;
+        outline: unset;
+    }
+    .check1>button:hover {
+        background-color: #FEF7D7;
+        color: #6B5048;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .check2>input:nth-of-type(1) {
+        flex: 3;
+        margin: 2.5% 0.5%;
+        border: 1px solid #bdbdbd;
+        font-size: 0.8vw;
+    }
+    .check2>input:nth-of-type(2),
+    .check2>input:nth-of-type(3) {
+        flex: 0.5;
+        margin: 2.5% 0.5%;
+        font-size: 0.8vw;
+    }
+    /* ----------------------------footer---------------------------- */
+    footer {
+        width: 100%;
+        height: 10.417vw;
+        background: #404040;
+    }
+    .inner {
+        width: 80%;
+        padding-top: 1%;
+        /* border: 1px solid white; */
+        color: #d8d8d8;
+        display: flex;
+        margin: auto;
+    }
+    .inner .logo {
+        flex: 1;
+        background: url(../image/logo-white.png) no-repeat;
+        text-indent: -9999px;
+    }
+    .address {
+        flex: 2;
+        font-size: 0.677vw;
+        line-height: 2;
+        text-align: left;
+        overflow: hidden;
+    }
+    footer .inner div p span {
+        position: relative;
+        padding-right: 20px;
+        display: inline-block;
+    }
+    footer .inner div p span::after {
+        content: "|";
+        position: absolute;
+        top: 0;
+        left: -10px;
+        color: #d8d8d8;
+        font-size: 0.521vw;
+    }
+    .tel {
+        flex: 1;
+        text-align: left;
+    }
+    .tel>strong {
+        font-size: 0.938vw;
+    }
+    .tel i {
+        font-size: 0.938vw;
+        padding: 5px;
+    }
+    .tel a {
+        font-size: 1.563vw;
+        padding: 5% 0;
+    }
+    .tel span {
+        font-size: 0.677vw;
+    }
+}
