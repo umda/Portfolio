@@ -1,7 +1,7 @@
 # 웹퍼블리셔 엄다인 포트폴리오
 ### 부족하지만 열심히 만들었습니다! 감사합니다
 
-00. Eom Dain - [VIEW](https://user-images.githubusercontent.com/68582720/93992299-58017b00-fdc8-11ea-976a-4fbf64a0e4fa.png)
+00. Eom Dain - [VIEW](http://umda.dothome.co.kr/dain/html/main.html)
 
 01. Charmant - [VIEW](https://user-images.githubusercontent.com/68582720/93992335-6354a680-fdc8-11ea-9726-fb32e31661b6.png)
 
