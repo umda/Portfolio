@@ -33,4 +33,30 @@ $(document).ready(function() {
         $(".content").removeClass("prev this next");
         $("#container").css("max-width", "1200px");
     });
+
+    // 배너 좌우 버튼 누르고 스크롤
+    $(".roll_right").click(function() {
+        $(".book_roll li").eq(0).insertAfter(".book_roll li:last-child");
+    });
+
+    $(".roll_left").click(function() {
+        $(".book_roll li").eq(-1).insertBefore(".book_roll li:first-child");
+    });
+
+    // 도서상세페이지
+    $(".book_roll li").click(function() {
+        var _this = $(this);
+        var liurl = _this.data("url");
+        $(".notebook").html();
+
+        $.ajax({
+            type: "post", //http 요청방식
+            url: liurl, //해당 url
+            dataType: "html", //data타입
+            success: function(data) {
+                //http 요청 성공 후 데이터 전송
+                $(".notebook").html(data);
+            },
+        });
+    });
 });
