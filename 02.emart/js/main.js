@@ -1,46 +1,29 @@
- /* 기분좋은 혜택 */
- //  var $marquee = $('.main-benefit .marquee').marquee({
- //      allowCss3Support: true,
- //      css3easing: 'linear',
- //      easing: 'linear',
- //      delayBeforeStart: 1000,
- //      direction: 'left',
- //      duplicated: true,
- //      duration: 20000,
- //      gap: 0,
- //      startVisible: true
- //  });
+$(document).ready(function() {
+    // 자동배너슬라이드
+    function slide() {
+        $(".marquee").animate({ left: "-200px" }, 1000, function() {
+            $(this).css({ left: 0 });
+            $(".marquee").append($(".marquee").children("li").eq(0));
+        });
+        current++;
+        if (current == 8) current = 0;
+    }
 
- //  $('.main-benefit .control .stop').on('click', function() {
- //      $marquee.marquee('pause');
- //      $(this).removeClass('on');
- //      $('.main-benefit .control .start').addClass('on');
+    timer();
+    var current = 0;
+    var $interval;
 
- //      return false;
- //  });
- //  $('.main-benefit .control .start').on('click', function() {
- //      $marquee.marquee('resume');
- //      $(this).removeClass('on');
- //      $('.main-benefit .control .stop').addClass('on');
+    function timer() {
+        var $interval = setInterval(function() {
+            slide();
+        }, 2000);
+    }
 
- //      return false;
- //  });
-
-
-
- function slide() {
-     $(".marquee").animate({ left: "-=187px" }, 1000, function() {
-         $(this).css({ "left": 0 });
-         $(".marquee").append($(".marquee").children("li").eq(0));
-     });
-     current++;
-     if (current == 5) current = 0;
- }
-
- timer();
- var current = 0;
- var $interval;
-
- function timer() {
-     var $interval = setInterval(function() { slide() }, 2000);
- }
+    // 배너(모바일)
+    $(".hd_btn > img").click(function() {
+        $(".top_header").css({ display: "block" });
+    });
+    $(".top_header").click(function() {
+        $(".top_header").css({ display: "none" });
+    });
+});
