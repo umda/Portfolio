@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../XEIcon-2.2.0/xeicon.min.css">
     <script src="../js/main.js" defer></script>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <title>HDmall</title>
@@ -43,7 +44,7 @@
                     </ul>
                 </div>
                 <div class="logo">
-                    <img src="../img/logo.PNG">
+                    <a href="#"><img src="../img/logo.PNG"></a>
                 </div>
                 <div class="bottom_right">
                     <ul>
@@ -54,10 +55,10 @@
                             <a href="#">간편요금계산기</a>
                         </li>
                         <li>
-                            <a href="#">돋</a>
+                            <a href="#"><i class="xi-search"></i></a>
                         </li>
                         <li>
-                            <a href="#">햄</a>
+                            <a href="#"><i class="xi-bars"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -76,8 +77,8 @@
                 <li class="image7"><img src="../img/main7.PNG" alt="7"></li>
                 <li class="image8"><img src="../img/main8.PNG" alt="8"></li>
             </ul>
-            <button id="prev"><</button>
-            <button id="next">></button>
+            <i id="prev" class="xi-caret-up-circle xi-rotate-270 xi-5x"></i>
+            <i id="next" class="xi-caret-up-circle xi-rotate-90 xi-5x"></i>
         </div>
 
         <div class="best">
@@ -88,8 +89,8 @@
                 </div>
             </div>
             <div class="best_slide">
-                <button id="prev1"><</button>
-                <button id="next1">></button>
+                <i id="prev1" class="xi-angle-left xi-5x"></i>
+                <i id="next1" class="xi-angle-right xi-5x"></i>
                 <div class="best_slidebox">
                     <ul id="slidebox">
                         <li id="bottom1">
@@ -237,8 +238,8 @@
                                 <li><img src="../img/s8.PNG"></li>
                             </ul>
                         </div>
-                        <button id="prev2"><</button>
-                        <button id="next2">></button>
+                        <i id="prev2" class="xi-angle-left xi-4x"></i>
+                        <i id="next2" class="xi-angle-right xi-4x"></i>
                     </div>
                 </div>
             </div>
@@ -275,7 +276,7 @@
                 </div>
             </div>
             <div class="ad">
-                <img src="../img/footer1.png" alt="광고">
+                <a href="#"><img src="../img/footer1.png" alt="광고"></a>
             </div>
             <div class="notice">
                 <span>공지사항</span>
@@ -289,27 +290,34 @@
             <div>
                 <div class="ft_top_left">
                     <ul>
-                        <li>개인</li>
-                        <li>기업</li>
-                        <li>지역방송</li>
-                        <li>화사소개</li>
-                        <li>미환급금조회</li>
-                        <li>고객지원</li>
+                        <li><a href="#">개인</a></li>
+                        <li><a href="#">기업</a></li>
+                        <li><a href="#">지역방송</a></li>
+                        <li><a href="#">화사소개</a></li>
+                        <li><a href="#">미환급금조회</a></li>
+                        <li><a href="#">고객지원</a></li>
                     </ul>
                 </div>
-                <div class="ft_top_right">FAMILY SITE</div>
+                <select class="ft_top_right">
+                    <option value="">FAMILY SITE</option>
+                    <option value="">패밀리사이트1</option>
+                    <option value="">패밀리사이트2</option>
+                    <option value="">패밀리사이트3</option>
+                    <option value="">패밀리사이트4</option>
+                    <option value="">패밀리사이트5</option>
+                </select>
             </div>
         </div>
         <div class="ft_center">
             <ul>
-                <li>전자공고</li>
-                <li>개인정보처리방침</li>
-                <li>영상정보처리기기 운영,방침</li>
-                <li>이용약관</li>
-                <li>스팸메일방지정책</li>
-                <li>청소년보호정책</li>
-                <li>이용자피해예방온라인교육</li>
-                <li>오시는 길</li>
+                <li><a href="#">전자공고</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">영상정보처리기기 운영,방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">스팸메일방지정책</a></li>
+                <li><a href="#">청소년보호정책</a></li>
+                <li><a href="#">이용자피해예방온라인교육</a></li>
+                <li><a href="#">오시는 길</a></li>
             </ul>
         </div>
         <div class="ft_bottom">

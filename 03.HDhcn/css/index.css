@@ -3,7 +3,7 @@
 }
 
 #header:after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 1px;
@@ -20,13 +20,13 @@
 }
 
 .top:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
     height: 1px;
     left: 0;
-    bottom: -3px;
+    bottom: 0;
     background-color: #bdbdbd;
 }
 
@@ -51,7 +51,7 @@
     overflow: hidden;
 }
 
-.top_left>ul>li:first-child>a {
+.top_left>ul>li:hover>a {
     background-color: black;
     color: white;
 }
@@ -61,6 +61,8 @@
     width: 100px;
     text-align: center;
     border: 1px solid #c4c4c4;
+    border-bottom: none;
+    border-top: none;
 }
 
 .top_left>ul>li>a {
@@ -90,10 +92,13 @@
     text-align: center;
 }
 
+.top_right>ul>li:hover>a {
+    font-weight: bold;
+    font-size: 17px;
+}
+
 .top_right>ul>li>a {
     display: block;
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -132,16 +137,10 @@
     font-weight: bold;
 }
 
-.logo {
-    position: relative;
-}
-
-.logo>img {
+.logo img {
+    height: 90%;
     display: block;
-    /* border: 1px solid black; */
-    margin: auto;
-    line-height: 70px;
-    top: 5px;
+    margin: 1.5% 25%;
 }
 
 .bottom_right>ul {
@@ -153,13 +152,18 @@
 .bottom_right>ul>li {
     float: left;
     width: 106px;
+    height: 70px;
 }
 
 .bottom_right>ul>li>a {
     display: block;
-    width: 100%;
     text-align: center;
     font-size: 14px;
+}
+
+.bottom_right i {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 
@@ -200,26 +204,18 @@
 
 #prev {
     position: absolute;
-    padding: 17px 28px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 30px;
     z-index: 111;
     top: 43%;
     left: 40px;
+    cursor: pointer;
 }
 
 #next {
     position: absolute;
-    padding: 17px 28px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 30px;
     z-index: 111;
     top: 43%;
     right: 40px;
+    cursor: pointer;
 }
 
 
@@ -235,7 +231,7 @@
 /* -----------------------------best_top, text----------------------------- */
 
 .best_top::before {
-    content: '';
+    content: "";
     display: block;
     width: 67%;
     height: 2px;
@@ -278,12 +274,14 @@
     position: absolute;
     left: 0;
     top: 50%;
+    cursor: pointer;
 }
 
 #next1 {
     position: absolute;
     right: 0;
     top: 50%;
+    cursor: pointer;
 }
 
 .best_slidebox {
@@ -325,7 +323,7 @@
 }
 
 .best_slidebox>ul>li:hover .over {
-    display: block
+    display: block;
 }
 
 .best_slide>button {
@@ -458,6 +456,7 @@
     width: 60px;
     height: 30px;
     color: white;
+    cursor: pointer;
 }
 
 .best_3 {
@@ -724,7 +723,7 @@
 }
 
 .best_box::after {
-    content: '';
+    content: "";
     display: block;
     padding-bottom: 50px;
 }
@@ -751,12 +750,16 @@
     position: absolute;
     left: 15%;
     top: 50%;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 #next2 {
     position: absolute;
     right: 15%;
     top: 50%;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .video_slide>button {
@@ -782,14 +785,14 @@
     font-size: 40px;
 }
 
- :root {
+:root {
     --width: 350px;
 }
 
 .video_box {
     overflow: hidden;
     padding-top: 50px;
-    width: calc(var(--width)*3);
+    width: calc(var(--width) * 3);
     position: relative;
     margin: auto;
     padding-bottom: 130px;
@@ -797,7 +800,7 @@
 
 .box {
     /* width: 30000px; */
-    width: calc(var(--width)*8);
+    width: calc(var(--width) * 8);
     padding-left: 30px;
     display: flex;
 }
@@ -898,11 +901,12 @@
 
 .ad img {
     display: block;
-    width: 100%
+    width: 100%;
 }
 
 .notice {
     width: 60%;
+    height: 80px;
     margin: auto;
     display: flex;
 }
@@ -910,7 +914,7 @@
 .notice>span {
     flex: 1;
     text-align: center;
-    padding: 30px 0;
+    line-height: 80px;
 }
 
 .notice>span:nth-of-type(1) {
@@ -921,6 +925,7 @@
 .notice>span:nth-of-type(2) {
     flex: 5;
     text-align: left;
+    cursor: pointer;
 }
 
 .notice>span:nth-of-type(3),
@@ -944,16 +949,17 @@ footer {
 
 .ft_top>div {
     width: 60%;
-    display: flex;
     margin: auto;
 }
 
 .ft_top_left {
-    flex: 1;
+    float: left;
+    width: 50%;
 }
 
 .ft_top_right {
-    flex: 1;
+    float: right;
+    width: 20%;
     text-align: right;
     margin: 10px 0px;
 }
@@ -981,14 +987,21 @@ footer {
 }
 
 .ft_center>ul {
-    width: 60%;
-    margin: auto;
+    width: 69%;
+    margin: 0 auto;
     overflow: hidden;
+    display: flex;
 }
 
 .ft_center>ul>li {
-    float: left;
-    margin: 20px 8px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.ft_center>ul>li:nth-of-type(3),
+.ft_center>ul>li:nth-of-type(7) {
+    flex: 2;
 }
 
 .ft_center>ul>li:nth-of-type(2) {
