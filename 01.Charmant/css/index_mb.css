@@ -1,74 +1,34 @@
 @charset "UTF-8";
-@media (max-width:767px) {
+@media (max-width: 767px) {
     @font-face {
-        font-family: 'AAA';
-        src: local('Ubuntu-Bold'), url('../css/Ubuntu/Ubuntu-Bold.ttf');
+        font-family: "AAA";
+        src: local("Ubuntu-Bold"), url("../css/Ubuntu/Ubuntu-Bold.ttf");
     }
     @font-face {
-        font-family: 'BBB';
-        src: local('Ubuntu-Light'), url('../css/Ubuntu/Ubuntu-Light.ttf');
+        font-family: "BBB";
+        src: local("Ubuntu-Light"), url("../css/Ubuntu/Ubuntu-Light.ttf");
     }
     @font-face {
-        font-family: 'CCC';
-        src: local('Ubuntu-Medium'), url('../css/Ubuntu/Ubuntu-Medium.ttf');
+        font-family: "CCC";
+        src: local("Ubuntu-Medium"), url("../css/Ubuntu/Ubuntu-Medium.ttf");
     }
     @font-face {
-        font-family: 'DDD';
-        src: local('NanumGothic-ExtraBold'), url('../css/Nanum_Gothic/NanumGothic-ExtraBold.ttf');
+        font-family: "DDD";
+        src: local("NanumGothic-ExtraBold"), url("../css/Nanum_Gothic/NanumGothic-ExtraBold.ttf");
     }
     @font-face {
-        font-family: 'EEE';
-        src: local('NanumGothic-Bold'), url('../css/Nanum_Gothic/NanumGothic-Bold.ttf');
+        font-family: "EEE";
+        src: local("NanumGothic-Bold"), url("../css/Nanum_Gothic/NanumGothic-Bold.ttf");
     }
     @font-face {
-        font-family: 'FFF';
-        src: local('NanumGothic-Regular'), url('../css/Nanum_Gothic/NanumGothic-Regular.ttf');
+        font-family: "FFF";
+        src: local("NanumGothic-Regular"), url("../css/Nanum_Gothic/NanumGothic-Regular.ttf");
     }
     /* ----------------------------랜딩페이지---------------------------- */
+    #popup,
+    #sch,
     aside {
-        width: 49%;
-        overflow: hidden;
-        position: fixed;
-        top: 54%;
-        left: -23%;
-        z-index: 1111;
-        transform: rotate(-90deg);
         display: none;
-    }
-    #aside {
-        width: 85%;
-        margin: auto;
-        height: 100%;
-        border-radius: 1.302vw;
-        text-align: center;
-        display: flex;
-        line-height: 2;
-        background-color: #bebebe;
-    }
-    #aside>a {
-        flex: 1;
-        text-decoration: none;
-        margin: 0 0.260vw;
-        color: white;
-        font-family: BBB;
-        font-size: 0.781vw;
-        /* border: 1px solid red; */
-        width: 26.042vw;
-    }
-    #aside>a:hover {
-        color: black;
-        font-weight: bold;
-    }
-    #aside>a:hover:after {
-        content: '';
-        display: block;
-        /* position: absolute; */
-        width: 50%;
-        margin: auto;
-        height: 2px;
-        left: 0;
-        bottom: 8px;
-        background-color: black;
     }
     #top {
         position: fixed;
@@ -85,18 +45,6 @@
         z-index: 111;
         display: none;
     }
-    /* -----------------------img section start------------------------- */
-    #header {
-        width: 100%;
-        position: relative;
-        display: flex;
-        margin: auto;
-        overflow: hidden;
-    }
-    .section {
-        position: relative;
-        box-sizing: border-box;
-    }
     #header_fix {
         position: fixed;
         top: 0;
@@ -104,35 +52,40 @@
         background-color: white;
         opacity: 0.5;
         width: 100%;
+        height: 50px;
         display: flex;
         overflow: hidden;
         z-index: 111;
         display: none;
     }
-    .logo {
-        flex: 1;
-        display: block;
-        height: 50%;
-        line-height: 135px;
+    #header_fix .logo {
+        display: none;
+    }
+    /* -----------------------img section start------------------------- */
+    #header {
+        width: 100%;
+        height: 50px;
+        display: flex;
+    }
+    #header>div {
         display: none;
     }
     .menu {
-        flex: 1;
-        line-height: 25px;
+        width: 100%;
     }
     .menu>ul {
-        overflow: hidden;
         width: 100%;
-        margin: auto;
         display: flex;
     }
     .menu>ul>li {
         flex: 1;
+        height: 100%;
         text-align: center;
         font-family: AAA;
         color: black;
     }
     .menu>ul>li>a {
+        line-height: 50px;
         font-size: 3.333vw;
         display: block;
     }
@@ -141,55 +94,33 @@
         color: white;
         opacity: 1;
     }
+    #prev,
+    #next {
+        display: none;
+    }
     #img {
         width: 100%;
         position: relative;
     }
-    #img>button {
-        position: absolute;
-        border: 0px solid black;
-        background-color: #404040;
-        color: white;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        text-align: center;
-        display: none;
-    }
-    #img>button:active {
-        outline: none;
-        border: none;
-    }
-    #prev {
-        bottom: 0;
-        left: 47%;
-        z-index: 11;
-    }
-    #next {
-        bottom: 0;
-        right: 47%;
-        z-index: 11;
-    }
     #img>ul {
         width: 100%;
-        height: 300px;
+        height: 55vh;
         position: relative;
         overflow: hidden;
+        background-color: black;
     }
     #img>ul>li {
         width: 100%;
-        height: 100%;
+        margin: 5% 0;
         position: absolute;
     }
     #img img {
         width: 100%;
-        height: 100%;
     }
     /* ----------------------------charmant---------------------------- */
     #charmant {
         width: 100%;
-        margin: auto;
+        height: 100vh;
         position: relative;
         overflow: hidden;
         background-color: black;
@@ -201,7 +132,7 @@
         font-size: 6.944vw;
         font-family: BBB;
         text-align: center;
-        padding-top: 10px;
+        padding-top: 100px;
     }
     div.charmant_1 {
         top: 30px;
@@ -217,13 +148,13 @@
     }
     .CHtext {
         color: white;
-        font-size: 2.833vw;
+        font-size: 15px;
         font-family: FFF;
         padding-top: 5%;
     }
     .CHtext>div>p {
         display: block;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
         line-height: 1.5;
         text-align: justify;
     }
@@ -243,7 +174,7 @@
         position: relative;
     }
     .CHaddress ul:nth-of-type(1)::before {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         background-color: #edd6ba;
@@ -253,40 +184,39 @@
         top: 0;
     }
     .CHaddress ul:after {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         background-color: #edd6ba;
         position: absolute;
         width: 100%;
         left: 0;
-        bottom: 6%;
+        bottom: 0;
     }
     .CHaddress ul>li:nth-of-type(1) {
         color: #deab72;
         font-family: EEE;
-        font-size: 2.833vw;
-        padding: 3px 0;
+        font-size: 17px;
+        padding: 10px 0;
         position: relative;
     }
     .CHaddress ul>li:nth-of-type(2) {
         color: ivory;
         font-family: FFF;
-        font-size: 2vw;
-        padding: 5px 0;
+        font-size: 15px;
+        padding-bottom: 10px;
     }
     /* ----------------------------artist---------------------------- */
     #artist {
         width: 100%;
         position: relative;
-        margin: auto;
     }
     #artist>h1 {
         width: 100%;
         text-align: center;
         font-size: 6.944vw;
         font-family: AAA;
-        padding-top: 2.083vw;
+        padding-top: 50px;
     }
     #artist>h2 {
         display: block;
@@ -304,13 +234,13 @@
         display: flex;
     }
     .flute::after {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         background-color: #edd6ba;
         position: absolute;
         width: 100%;
-        bottom: 50%;
+        bottom: 48%;
     }
     .flute>div {
         text-align: center;
@@ -360,8 +290,11 @@
     #calendar {
         background: #404040;
         width: 100%;
-        height: 333px;
+        height: 50vh;
         position: relative;
+    }
+    .calendar {
+        padding-top: 80px;
     }
     .pignose-calendar {
         width: 80% !important;
@@ -372,14 +305,14 @@
     }
     .pignose-calendar .pignose-calendar-top .pignose-calendar-top-year {
         font-size: 80% !important;
-        color: rgba(0, 0, 0, .5);
+        color: rgba(0, 0, 0, 0.5);
     }
     .pignose-calendar .pignose-calendar-top {
         padding: 0.6em 0 !important;
         background-color: #fafafa;
         border-bottom: 1px solid #e2e2e2;
-        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .125);
-        box-shadow: 0 3px 8px rgba(0, 0, 0, .125);
+        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
         position: relative;
         overflow: hidden;
     }
@@ -409,8 +342,8 @@
         line-height: 2.4em;
         text-align: center;
         text-decoration: none;
-        -webkit-transition: background-color .3s ease, color .3s ease;
-        transition: background-color .3s ease, color .3s ease;
+        -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
         font-size: 80% !important;
     }
     .pignose-calendar .pignose-calendar-body {
@@ -422,8 +355,8 @@
     /* ----------------------------audition---------------------------- */
     #audition {
         width: 80%;
-        margin: auto;
-        padding: 5% 0;
+        margin: 0 auto;
+        padding: 50px 0;
         position: relative;
     }
     .aud_img {
@@ -457,21 +390,24 @@
     }
     .aud_text h2 {
         position: relative;
-        font-size: 3.042vw;
+        font-size: 20px;
         font-weight: bold;
-        width: 60px;
-        height: 15px;
+        width: 100px;
+        height: 27px;
         border-bottom: 1px solid #404040;
         color: #404040;
         text-align: center;
         font-family: DDD;
+    }
+    .aud_text>div {
+        margin-bottom: 20px;
     }
     .aud_text>div>div {
         width: 95%;
         position: relative;
         left: 2%;
         margin: 5px 0;
-        font-size: 2.677vw;
+        font-size: 15px;
         color: gray;
         text-align: left;
         font-family: FFF;
@@ -480,7 +416,7 @@
         padding-bottom: 1%;
     }
     .aud_text>div>div>p>i {
-        font-size: 2.677vw;
+        font-size: 15px;
     }
     .aud_text>div:nth-child(2)>div {
         line-height: 1.5;
@@ -500,10 +436,10 @@
         color: #404040;
         border-radius: 0.781vw;
         width: 40%;
-        height: 6.385vw;
+        height: 50px;
         border: 3px solid #404040;
         margin: 2% 0;
-        font-size: 3.406vw;
+        font-size: 20px;
         font-family: fff;
         letter-spacing: 1.302vw;
         text-indent: 6%;
@@ -554,8 +490,8 @@
         font-size: 2vw;
     }
     .check1>button:hover {
-        background-color: #FEF7D7;
-        color: #6B5048;
+        background-color: #fef7d7;
+        color: #6b5048;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
@@ -589,10 +525,11 @@
     }
     .address {
         flex: 2;
-        font-size: 2.677vw;
+        font-size: 15px;
         line-height: 1.5;
         text-align: left;
         overflow: hidden;
+        margin-right: 25px;
     }
     footer .inner div p span {
         position: relative;
@@ -612,17 +549,17 @@
         text-align: left;
     }
     .tel>strong {
-        font-size: 2.938vw;
+        font-size: 15px;
     }
     .tel i {
-        font-size: 2.938vw;
+        font-size: 15px;
         padding: 5px;
     }
     .tel a {
-        font-size: 3.563vw;
+        font-size: 17px;
         padding: 5% 0;
     }
     .tel span {
-        font-size: 2.677vw;
+        font-size: 15px;
     }
 }

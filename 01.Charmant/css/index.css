@@ -1,28 +1,28 @@
 @charset "UTF-8";
-@media (min-width:1920px) {
+@media (min-width: 1920px) {
     @font-face {
-        font-family: 'AAA';
-        src: local('Ubuntu-Bold'), url('../css/Ubuntu/Ubuntu-Bold.ttf');
+        font-family: "AAA";
+        src: local("Ubuntu-Bold"), url("../css/Ubuntu/Ubuntu-Bold.ttf");
     }
     @font-face {
-        font-family: 'BBB';
-        src: local('Ubuntu-Light'), url('../css/Ubuntu/Ubuntu-Light.ttf');
+        font-family: "BBB";
+        src: local("Ubuntu-Light"), url("../css/Ubuntu/Ubuntu-Light.ttf");
     }
     @font-face {
-        font-family: 'CCC';
-        src: local('Ubuntu-Medium'), url('../css/Ubuntu/Ubuntu-Medium.ttf');
+        font-family: "CCC";
+        src: local("Ubuntu-Medium"), url("../css/Ubuntu/Ubuntu-Medium.ttf");
     }
     @font-face {
-        font-family: 'DDD';
-        src: local('NanumGothic-ExtraBold'), url('../css/Nanum_Gothic/NanumGothic-ExtraBold.ttf');
+        font-family: "DDD";
+        src: local("NanumGothic-ExtraBold"), url("../css/Nanum_Gothic/NanumGothic-ExtraBold.ttf");
     }
     @font-face {
-        font-family: 'EEE';
-        src: local('NanumGothic-Bold'), url('../css/Nanum_Gothic/NanumGothic-Bold.ttf');
+        font-family: "EEE";
+        src: local("NanumGothic-Bold"), url("../css/Nanum_Gothic/NanumGothic-Bold.ttf");
     }
     @font-face {
-        font-family: 'FFF';
-        src: local('NanumGothic-Regular'), url('../css/Nanum_Gothic/NanumGothic-Regular.ttf');
+        font-family: "FFF";
+        src: local("NanumGothic-Regular"), url("../css/Nanum_Gothic/NanumGothic-Regular.ttf");
     }
     #header_fix {
         position: fixed;
@@ -37,11 +37,14 @@
         z-index: 111;
         display: none;
     }
-    .logo {
+    #header_fix .logo {
         flex: 1;
         display: block;
-        height: 50%;
-        line-height: 135px;
+        line-height: 7.5;
+    }
+    #header_fix .logo img {
+        width: 100%;
+        margin: 0 15%;
     }
     .menu {
         flex: 6;
@@ -69,7 +72,7 @@
         position: relative;
     }
     .menu>ul>li:hover>a:after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         width: 40%;
@@ -84,10 +87,9 @@
         height: 400px;
         position: absolute;
         right: 0;
-        border-radius: 20%;
-        background: url(../image/sch-background.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
+        top: 50%;
+        border-radius: 10%;
+        background: #ffffff;
         display: none;
         z-index: 111;
     }
@@ -139,7 +141,7 @@
     #aside>a {
         flex: 1;
         text-decoration: none;
-        margin: 0 0.260vw;
+        margin: 0 0.26vw;
         color: white;
         font-family: BBB;
         font-size: 0.781vw;
@@ -151,7 +153,7 @@
         font-weight: bold;
     }
     #aside>a:hover:after {
-        content: '';
+        content: "";
         display: block;
         /* position: absolute; */
         width: 50%;
@@ -178,12 +180,23 @@
     }
     /* -----------------------img section start------------------------- */
     #header {
-        width: 90%;
+        width: 80%;
         position: relative;
         height: 100px;
-        display: flex;
         margin: auto;
-        overflow: hidden;
+    }
+    #header>div {
+        width: 20%;
+        float: left;
+    }
+    #header>div img {
+        display: block;
+        margin: 10% 0;
+        width: 100%;
+    }
+    .menu {
+        width: 80%;
+        float: right;
     }
     .section {
         position: relative;
@@ -192,34 +205,22 @@
     #img {
         width: 100%;
         height: 100vh;
-        /* border: 1px solid green; */
         overflow: hidden;
         position: relative;
     }
-    #img>button {
-        position: absolute;
-        border: 0px solid black;
-        background-color: #404040;
-        color: white;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        text-align: center;
-    }
-    #img>button:active {
-        outline: none;
-        border: none;
-    }
     #prev {
+        position: absolute;
         bottom: 0;
-        left: 47%;
+        left: 45%;
         z-index: 11;
+        color: #ffffff;
     }
     #next {
+        position: absolute;
         bottom: 0;
-        right: 47%;
+        right: 45%;
         z-index: 11;
+        color: #ffffff;
     }
     #img>ul {
         width: 100%;
@@ -237,7 +238,6 @@
         left: 100%;
     }
     #img img {
-        width: 80%;
         height: 100%;
     }
     /* ----------------------------charmant---------------------------- */
@@ -251,18 +251,20 @@
         background: url(../image/HALL.png);
         background-size: 100%;
     }
-    #charmant h1 {
+    .CHbg {
+        width: 40%;
+        background-color: #deab72;
+        position: relative;
+    }
+    .CHbg h1 {
+        position: absolute;
         color: white;
         font-size: 4.167vw;
-        top: 13%;
-        left: 16%;
-        width: 50%;
+        top: 100px;
+        left: 40%;
         font-family: BBB;
         z-index: 111;
         text-align: left;
-    }
-    .CHbg>img {
-        width: 100%;
     }
     div.charmant_1 {
         position: absolute;
@@ -308,7 +310,7 @@
         position: relative;
     }
     .CHaddress ul:nth-of-type(1)::before {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         background-color: #edd6ba;
@@ -318,14 +320,14 @@
         top: 9px;
     }
     .CHaddress ul:after {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         background-color: #edd6ba;
         position: absolute;
         width: 90%;
         left: 0;
-        bottom: -15px;
+        bottom: -10px;
     }
     .CHaddress ul>li:nth-of-type(1) {
         color: #deab72;
@@ -351,14 +353,14 @@
     #artist>h1 {
         width: 100%;
         text-align: center;
-        font-size: 3.646vw;
+        font-size: 2.646vw;
         font-family: AAA;
         padding-top: 2.083vw;
     }
     #artist>h2 {
         display: block;
         text-indent: 6%;
-        font-size: 1.563vw;
+        font-size: 1.3vw;
         font-family: sans-serif;
         padding-bottom: 1.042vw;
         text-align: left;
@@ -374,7 +376,7 @@
         display: flex;
     }
     .flute::after {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         background-color: #edd6ba;
@@ -393,7 +395,7 @@
         margin: auto;
     }
     .flute p {
-        font-size: 1.302vw;
+        font-size: 1vw;
         font-family: DDD;
         padding-top: 5%;
     }
@@ -417,14 +419,14 @@
         margin: auto;
     }
     .artist_1 p {
-        font-size: 1.302vw;
+        font-size: 1vw;
         font-family: DDD;
         padding-top: 5%;
     }
     .artist_2 h2 {
         display: block;
         text-indent: 27%;
-        font-size: 1.563vw;
+        font-size: 1.3vw;
         font-family: sans-serif;
         padding-bottom: 1.042vw;
         text-align: left;
@@ -439,7 +441,7 @@
     .calendar {
         position: relative;
         width: 100%;
-        top: 9%;
+        top: 100px;
         margin: auto;
     }
     .cal_text {
@@ -461,6 +463,15 @@
         line-height: 2.8em;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+    }
+    .pignose-calendar .pignose-calendar-header {
+        padding: 0 1.2em;
+        margin-top: 0.2em !important;
+        font-weight: 600;
+        overflow: hidden;
+    }
+    .pignose-calendar .pignose-calendar-body {
+        padding: 0 !important;
     }
     /* ----------------------------audition---------------------------- */
     #audition {
@@ -502,7 +513,7 @@
         text-align: left;
     }
     .aud_img_text>h1::after {
-        content: '';
+        content: "";
         display: block;
         height: 2px;
         position: absolute;
@@ -632,8 +643,8 @@
         outline: unset;
     }
     .check1>button:hover {
-        background-color: #FEF7D7;
-        color: #6B5048;
+        background-color: #fef7d7;
+        color: #6b5048;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
